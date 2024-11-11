@@ -8,7 +8,6 @@ class Base(DeclarativeBase):
     pass
 
 
-# Таблиця для зв'язку many-to-many між таблицями notes та tags
 student_m2m_group = Table(
     "student_m2m_group",
     Base.metadata,
@@ -22,10 +21,6 @@ class Student(Base):
     __tablename__ = "students"
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(nullable=False)
-    # created: Mapped[datetime] = mapped_column(default=func.now())
-    # records: Mapped[list["Record"]] = relationship(
-    #     cascade="all, delete", back_populates="note"
-    # )
     groups: Mapped[list["Group"]] = relationship(
         secondary=student_m2m_group, back_populates="students"
     )

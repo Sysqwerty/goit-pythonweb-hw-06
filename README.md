@@ -56,6 +56,7 @@ time new using Faker module.
 [{'Subject_name': 'Biology', 'Group_name': 'Group-1', 'avg_score': 77.59649122807018},
  {'Subject_name': 'Biology', 'Group_name': 'Group-2', 'avg_score': 81.20289855072464},
  {'Subject_name': 'Biology', 'Group_name': 'Group-3', 'avg_score': 80.95294117647059}]
+
 4. Знайти середній бал на потоці(по всій таблиці оцінок).
 {'avg_score': 79.935}
 
